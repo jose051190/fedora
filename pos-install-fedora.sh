@@ -33,6 +33,7 @@ packages=(
     "com.vysp3r.ProtonPlus"
     "com.nextcloud.desktopclient.nextcloud"
     "com.borgbase.Vorta"
+    "me.kozec.syncthingtk"
 )
 
 # Instalando pacotes do flathub
