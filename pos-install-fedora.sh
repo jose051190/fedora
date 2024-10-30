@@ -36,6 +36,7 @@ packages=(
     "me.kozec.syncthingtk"
     "org.gtk.Gtk3theme.Adwaita-dark"
     "org.gnome.DejaDup"
+    "com.github.tchx84.Flatseal"
 )
 
 # Instalando pacotes do flathub
