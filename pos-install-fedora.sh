@@ -1,5 +1,9 @@
 #!/bin/bash
 
+sudo dnf install jetbrains-mono-fonts yaru-icon-theme gnome-tweaks fastfetch chromium neovim -y
+
+sudo dnf remove gnome-weather gnome-maps gnome-contacts snapshot gnome-tour gnome-classic-session simple-scan rhythmbox gnome-connections gnome-boxes firefox gnome-software libreoffice-langpack-pt-BR -y
+
 install_flatpak() {
     package=$1
     echo "Instalando $package..."
