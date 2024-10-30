@@ -35,6 +35,7 @@ packages=(
     "com.borgbase.Vorta"
     "me.kozec.syncthingtk"
     "org.gtk.Gtk3theme.Adwaita-dark"
+    "org.gnome.DejaDup"
 )
 
 # Instalando pacotes do flathub
