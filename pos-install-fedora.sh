@@ -30,7 +30,9 @@ packages=(
     "net.agalwood.Motrix"
     "org.telegram.desktop"
     "com.mattjakeman.ExtensionManager"
-    "com.vysp3r.ProtonPlus"  # Adicionando ProtonPlus à lista
+    "com.vysp3r.ProtonPlus"
+    "com.nextcloud.desktopclient.nextcloud"
+    "com.borgbase.Vorta"
 )
 
 # Instalando pacotes do flathub
