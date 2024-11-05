@@ -49,7 +49,7 @@ install_flatpak_user "https://sober.vinegarhq.org/sober.flatpakref"
 
 sudo flatpak override --env=GTK_THEME=Adwaita-dark
 
-gsettings set org.gnome.desktop.interface gtk-theme "adw-gtk3-dark"
+gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3-dark' && gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
 # Caminho para o arquivo de configuração do Chromium
 CONFIG_PATH="$HOME/.var/app/org.chromium.Chromium/config/chromium-flags.conf"
