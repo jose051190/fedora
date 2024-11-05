@@ -47,7 +47,7 @@ done
 # Instalando pacote específico com URL
 install_flatpak_user "https://sober.vinegarhq.org/sober.flatpakref"
 
-flatpak override --env=GTK_THEME=Adwaita-dark
+sudo flatpak override --env=GTK_THEME=Adwaita-dark
 
 # Caminho para o arquivo de configuração do Chromium
 CONFIG_PATH="$HOME/.var/app/org.chromium.Chromium/config/chromium-flags.conf"
