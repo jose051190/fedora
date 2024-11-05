@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo dnf install jetbrains-mono-fonts yaru-icon-theme gnome-tweaks fastfetch chromium neovim -y
+sudo dnf install jetbrains-mono-fonts yaru-icon-theme gnome-tweaks fastfetch neovim -y
 
 sudo dnf remove gnome-weather gnome-maps gnome-contacts snapshot gnome-tour libreoffice-langpack-en mediawriter gnome-classic-session simple-scan rhythmbox gnome-connections firefox gnome-software libreoffice-langpack-pt-BR -y
 
