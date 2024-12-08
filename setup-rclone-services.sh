@@ -58,7 +58,7 @@ Wants=network-online.target
 
 [Service]
 Type=notify
-ExecStart=/usr/bin/rclone mount servidor: "$SERVIDOR_DIR" --vfs-cache-mode writes --allow-other
+ExecStart=/usr/bin/rclone mount servidor: "$SERVIDOR_DIR" --config=/home/jose/.config/rclone/rclone.conf --allow-non-empty
 ExecStop=/bin/fusermount -u "$SERVIDOR_DIR"
 Restart=always
 User=jose
