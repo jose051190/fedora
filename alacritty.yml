@@ -8,13 +8,13 @@ env:
 ##################################
 
 window:
-  #  columns: 0
-  #  lines: 0
+  # columns: 0
+  # lines: 0
   opacity: 0.85
 
-  #position:
-  #  x: 0
-  #  y: 0
+  # position:
+  #   x: 0
+  #   y: 0
 
   padding:
     x: 15
@@ -68,40 +68,41 @@ colors:
 
   selection:
     text: '#000000'
+    background: '#c5c8c6'
 
-    normal:
-      black:   '#5C5F77'
-      red:     '#D20F39'
-      green:   '#40A02B'
-      yellow:  '#DF8E1D'
-      blue:    '#1E66F5'
-      magenta: '#EA76CB'
-      cyan:    '#179299'
-      white:   '#ACB0BE'
+  normal:
+    black:   '#5C5F77'
+    red:     '#D20F39'
+    green:   '#40A02B'
+    yellow:  '#DF8E1D'
+    blue:    '#1E66F5'
+    magenta: '#EA76CB'
+    cyan:    '#179299'
+    white:   '#ACB0BE'
 
-    bright:
-      black:   '#6C6F85'
-      red:     '#D20F39'
-      green:   '#40A02B'
-      yellow:  '#DF8E1D'
-      blue:    '#1E66F5'
-      magenta: '#EA76CB'
-      cyan:    '#179299'
-      white:   '#BCC0CC'
+  bright:
+    black:   '#6C6F85'
+    red:     '#D20F39'
+    green:   '#40A02B'
+    yellow:  '#DF8E1D'
+    blue:    '#1E66F5'
+    magenta: '#EA76CB'
+    cyan:    '#179299'
+    white:   '#BCC0CC'
 
-    dim:
-      black:   '#5C5F77'
-      red:     '#D20F39'
-      green:   '#40A02B'
-      yellow:  '#DF8E1D'
-      blue:    '#1E66F5'
-      magenta: '#EA76CB'
-      cyan:    '#179299'
-      white:   '#ACB0BE'
+  dim:
+    black:   '#5C5F77'
+    red:     '#D20F39'
+    green:   '#40A02B'
+    yellow:  '#DF8E1D'
+    blue:    '#1E66F5'
+    magenta: '#EA76CB'
+    cyan:    '#179299'
+    white:   '#ACB0BE'
 
-    indexed_colors:
-      - { index: 16, color: '#FE640B' }
-      - { index: 17, color: '#DC8A78' }
+  indexed_colors:
+    - { index: 16, color: '#FE640B' }
+    - { index: 17, color: '#DC8A78' }
 
 dynamic_title: true
 
