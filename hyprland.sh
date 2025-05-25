@@ -152,10 +152,10 @@ if [[ $REPLY =~ ^[Ss]$ ]]; then
 fi
 echo
 
-# Ferramentas de Captura de Tela (grim, slurp, grimshot)
+# Ferramentas de Captura de Tela (grim, slurp)
 confirm_action "Deseja instalar ferramentas de captura de tela nativas para Wayland (grim, slurp, grimshot)? (Recomendado)"
 if [[ $REPLY =~ ^[Ss]$ ]]; then
-    install_packages grim slurp grimshot
+    install_packages grim slurp
 fi
 echo
 
