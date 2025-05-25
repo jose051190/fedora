@@ -66,7 +66,8 @@ RED="\033] && error "Execute como root."
 # VERIFICAR INSTALAÇÃO DO DIALOG
 # ===============================
 check_dialog() {
-    if! command -v dialog &> /dev/null; then
+    # Altera '&>' para '>/dev/null 2>&1' para maior compatibilidade
+    if ! command -v dialog >/dev/null 2>&1; then
         echo -e "${RED}Erro: O utilitário 'dialog' não está instalado. Por favor, instale-o com 'sudo pacman -S dialog' antes de executar o script.${RESET}" >&2
         exit 1
     fi
