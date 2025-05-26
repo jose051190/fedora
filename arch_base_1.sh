@@ -37,7 +37,7 @@ AMD_DRIVER_PACKAGES=(
   vulkan-mesa-layers
 )
 PACOTES_ESSENCIAIS=(
-  wl-clipboard yazi fd ffmpeg unzip unrar 7zip jq poppler zoxide imagemagick npm fwupd fzf
+  wl-clipboard yazi rg fd ffmpeg unzip unrar 7zip jq poppler zoxide resvg imagemagick npm fwupd fzf
   ttf-nerd-fonts-symbols inter-font noto-fonts ttf-jetbrains-mono-nerd plymouth neovim rclone fastfetch
   htop btop ncdu virt-manager qemu-full ebtables dnsmasq edk2-ovmf spice-vdagent firewalld cryfs
   pacman-contrib pacutils expac less ksystemlog rsync sshfs go docker docker-compose cronie
@@ -242,7 +242,9 @@ mkinitcpio -P
 check_command "Gerar initramfs"
 
 echo -e "${YELLOW}>> Defina a senha do root:${RESET}"
-passwd
+until passwd; do
+  echo "Tente novamente para definir a senha do root."
+done
 check_command "Definir senha root"
 
 echo -e "${YELLOW}>> Habilitando multilib e ajustes do pacman.conf...${RESET}"
