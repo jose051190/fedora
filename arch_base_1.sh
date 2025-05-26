@@ -191,7 +191,7 @@ AMD_DRIVER_PACKAGES=(
   vulkan-mesa-layers
 )
 PACOTES_ESSENCIAIS=(
-  wl-clipboard yazi rg fd ffmpeg unzip unrar 7zip jq poppler zoxide resvg imagemagick npm fwupd fzf
+  wl-clipboard yazi fd ffmpeg unzip unrar 7zip jq poppler zoxide imagemagick npm fwupd fzf
   ttf-nerd-fonts-symbols inter-font noto-fonts ttf-jetbrains-mono-nerd plymouth neovim rclone fastfetch
   htop btop ncdu virt-manager qemu-full ebtables dnsmasq edk2-ovmf spice-vdagent firewalld cryfs
   pacman-contrib pacutils expac less ksystemlog rsync sshfs go docker docker-compose cronie
@@ -242,7 +242,7 @@ mkinitcpio -P
 check_command "Gerar initramfs"
 
 echo -e "${YELLOW}>> Defina a senha do root:${RESET}"
-echo "root:senha" | chpasswd
+passwd
 check_command "Definir senha root"
 
 echo -e "${YELLOW}>> Habilitando multilib e ajustes do pacman.conf...${RESET}"
@@ -292,7 +292,7 @@ check_command "Instalação de drivers AMD"
 echo -e "${YELLOW}>> Criando usuário $USERNAME...${RESET}"
 useradd -mG wheel "$USERNAME"
 check_command "Criar usuário $USERNAME"
-echo "$USERNAME:senha" | chpasswd
+passwd "$USERNAME"
 check_command "Definir senha para $USERNAME"
 echo "$USERNAME ALL=(ALL) ALL" > /etc/sudoers.d/$USERNAME
 check_command "Permissões sudo para $USERNAME"
@@ -363,5 +363,9 @@ else
 fi
 
 EOC
+
+cp instalar_yay.sh "$MOUNT_DIR/home/$USERNAME/"
+chown $USERNAME:$USERNAME "$MOUNT_DIR/home/$USERNAME/instalar_yay.sh"
+chmod +x "$MOUNT_DIR/home/$USERNAME/instalar_yay.sh"
 
 success "Instalação base e configuração principal concluída!"
