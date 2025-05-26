@@ -241,10 +241,11 @@ echo -e "${YELLOW}>> Gerando initramfs...${RESET}"
 mkinitcpio -P
 check_command "Gerar initramfs"
 
+# ------------------------------
+# Definir senha root
+# ------------------------------
 echo -e "${YELLOW}>> Defina a senha do root:${RESET}"
-until passwd; do
-  echo "Tente novamente para definir a senha do root."
-done
+passwd
 check_command "Definir senha root"
 
 echo -e "${YELLOW}>> Habilitando multilib e ajustes do pacman.conf...${RESET}"
@@ -294,6 +295,7 @@ check_command "Instalação de drivers AMD"
 echo -e "${YELLOW}>> Criando usuário $USERNAME...${RESET}"
 useradd -mG wheel "$USERNAME"
 check_command "Criar usuário $USERNAME"
+echo -e "${YELLOW}>> Defina a senha para $USERNAME:${RESET}"
 passwd "$USERNAME"
 check_command "Definir senha para $USERNAME"
 echo "$USERNAME ALL=(ALL) ALL" > /etc/sudoers.d/$USERNAME
